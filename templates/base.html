@@ -1,0 +1,31 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Blog Home</title>
+    {% comment %} Bootstrap core CSS {% endcomment %}
+    <link rel="stylesheet" href="{% static 'blog/vendor/bootstrap/css/bootstrap.min.css' %}">
+
+    {% comment %} Custom styles for this templates {% endcomment %}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+
+    {% include 'partials/navbar.html' %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include 'partials/footer.html' %}
+
+    {% comment %} Bootstrap Core Javascript {% endcomment %}
+
+    <script src="{% static 'blog/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'blog/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
